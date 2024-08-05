@@ -3,7 +3,7 @@ import { Server } from "socket.io";
 const io = new Server({
   allowEIO3: true,
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://anyveh.onrender.com",
   },
 });
 const port=process.env.PORT || 4000

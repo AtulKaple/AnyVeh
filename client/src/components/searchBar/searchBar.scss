@@ -1,0 +1,193 @@
+@import "../../responsive.scss";
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Outfit:wght@100..900&display=swap');
+.searchBar {
+  width: 850px;
+  border-radius: 20px;
+  font-family: Gruppo;
+  
+
+  @include lap {
+    width: 775px;
+  }
+  @include med {
+    width: 645px;
+  }
+
+  .type {
+  font-family: Gruppo;
+    
+    button {
+      padding: 16px 36px;
+  font-family: Gruppo;
+
+      width: 115px;
+      text-align: center;
+      justify-content: center;
+      background-color: #ffffff;
+      text-transform: capitalize;
+      border-bottom: none;
+      cursor: pointer;
+      font-size: 20px;
+      margin-bottom: 6px;
+      border: 1px solid white;
+
+      @include lap {
+        height: 50px;
+      }
+
+      @include med {
+        width: 100px;
+      }
+
+      &.active {
+        background-color: #161616;
+        color: white;
+        border: 1px solid white;
+      }
+
+      &:first-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        padding-left: 31px;
+
+      }
+      &:last-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding-left: 27px;
+      }
+    }
+  }
+
+  form {
+  font-family: Gruppo;
+
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    gap: 5px;
+    @include lap {
+      height: 50px;
+    }
+
+    @include mob {
+      flex-direction: column;
+      border: none;
+    }
+
+    input {
+
+      border: none;
+font-family: Marcellus;
+
+      padding: 0px 25px;
+      width: 230px;
+      margin-right: 3px;
+      border-radius: 15px;
+      font-size: 18px;
+      background-color: rgba(255, 255, 255, 0.13);
+      backdrop-filter: blur(10px);
+      color: #ffffff;
+
+      &:focus {
+        border: 1px solid white;
+        opacity: 1;
+        outline: none;
+        color: #ffffff;
+      }
+
+      @include lap {
+        padding: 0px 15px;}
+
+        @include med {
+          width: 200px;}
+
+          @include mob {
+            padding: 20px;
+            width: 280px;}
+    }
+
+    select {
+font-family: Marcellus;
+
+      background-color: rgba(255, 255, 255, 0.13);
+      backdrop-filter: blur(10px);
+      color: white;
+      width: 230px;
+      margin-right: 3px;
+
+      padding: 0px 25px;
+      border: none;
+      border-radius: 15px;
+      font-size: 18px;
+
+      option {
+        background-color: #161616;
+        color: white;
+      }
+
+      @include lap {
+        padding: 0px 15px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 180px;
+        }
+      }
+
+      @include med {
+        width: 200px;
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 140px;
+        }
+      }
+
+      @include mob {
+        padding: 20px;
+        border: 1px solid black;
+        width: 280px;
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 280px;
+        }
+      }
+    }
+
+    a {
+      flex: 1;
+      background-color: #161616;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid white;
+      border-radius: 15px;
+      width: 10px;
+
+      @include mob {
+        width: 280px;
+      }
+
+      button {
+        cursor: pointer;
+        border: none;
+        background-color: #161616;
+
+        @include mob {
+          padding: 10px;
+          background-color: transparent;
+        }
+
+        img {
+          height: 24px;
+          width: 24px;
+
+          @include mob {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

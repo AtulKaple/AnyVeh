@@ -1,0 +1,23 @@
+@import "../../responsive.scss";
+
+.layout {
+  background-color: #161616;
+
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+
+  @include lap {
+    max-width: 1366px;
+  }
+  @include med {
+    background-color: #161616;
+    max-width: 1024px;
+  }
+  @include mob {
+    max-width: 740px;
+  }
+
+  
+}

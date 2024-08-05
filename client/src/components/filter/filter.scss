@@ -1,0 +1,115 @@
+@import "../../responsive.scss";
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Gruppo&family=Marcellus&display=swap");
+// font-family: Gruppo;
+// font-family: Chakra Petch;
+// font-family: Marcellus;
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: aliceblue;
+
+  h1 {
+    font-weight: 400;
+    font-size: 38px;
+    font-family: Chakra Petch;
+    color: #b78f75;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  label {
+    font-size: 18px;
+    font-family: Gruppo;
+  }
+
+  input {
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
+    color: white;
+    width: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Marcellus;
+
+    &:focus {
+      border: 1px solid white;
+      opacity: 1;
+      outline: none;
+      color: #ffffff;
+    }
+  }
+
+  select {
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
+    color: white;
+    width: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Marcellus;
+
+    option {
+      background-color: #161616;
+      color: white;
+    }
+  }
+
+  .top {
+    input {
+      width: 100%;
+    }
+  }
+
+  .bottom {
+    width: 100%;
+
+    @include med {
+      input {
+        width: 100%;
+      }
+
+      select {
+        width: 100%;
+      }
+    }
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include mob {
+      width: 100%;
+
+      flex-direction: column;
+    }
+
+    button {
+      width: 100px;
+      margin-top: 20px;
+      height: 40px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border: 1px solid white;
+
+      background-color: #161616;
+
+      border-radius: 15px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

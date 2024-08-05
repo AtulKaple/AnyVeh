@@ -1,0 +1,101 @@
+@import "../../responsive.scss";
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Gruppo&family=Marcellus&display=swap');
+
+
+
+.profileUpdatePage {
+  height: 90vh;
+  display: flex;
+  
+
+  @include mob{
+    flex-direction: column;
+  }
+
+
+  .formContainer {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #161616;
+ 
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h1 {
+        font-family: Chakra Petch;
+        font-weight: 1000;
+        -webkit-text-stroke: 1px #B78F75;
+        color: transparent;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        label {
+          color: white;
+          margin-bottom: 5px;
+          margin-left: 5px;
+          font-size: 18px;
+          font-weight: 800;
+          font-family: Gruppo;
+        }
+
+        input {
+          padding: 20px;
+          color: white;
+          border-radius: 15px;
+          border: 1px solid black;
+          background-color: rgba(255, 255, 255, 0.13);
+          backdrop-filter: blur(10px);
+          outline: none;
+          font-family: Marcellus;
+
+          &:focus {
+            border: 1px solid white;
+          }
+        }
+      }
+      button {
+        padding: 20px;
+        border-radius: 15px;
+        border: none;
+        background-color: #161616;
+        border: 1px solid white;
+
+        color: #b78f75;
+
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 800;
+        font-family: Gruppo;
+      }
+    }
+  }
+
+  .sideContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    background-color: #161616;
+    font-family: Marcellus;
+
+
+    .avatar {
+      width: 40%;
+      object-fit: cover;
+    }
+  }
+}

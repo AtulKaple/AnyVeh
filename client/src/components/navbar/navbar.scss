@@ -1,0 +1,205 @@
+@import "../../responsive.scss";
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Marcellus&family=Russo+One&display=swap');
+// font-family: Gruppo;
+// font-family: Russo One;
+// font-family: Marcellus;
+
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: azure;
+  background-color: #161616;
+  padding: 0px 20px;
+  border-bottom: 1px solid #8a8a8a;
+  font-size: 18px;
+
+  @include mob {
+   padding-left: 0px;
+  }
+
+  @include lap {
+    height: 70px;
+  }
+
+  a {
+    transition: all 0.4s ease;
+    font-family: Gruppo;
+    
+
+    @include mob {
+      display: none;
+    }
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+  .left {
+    flex: 3;
+    display: flex;
+    gap: 30px;
+    height: 50px;
+    align-items: center;
+
+    .logo {
+      padding-left: 10px;
+      // font-weight: bold;
+      // font-size: 24px;
+      display: flex;
+      // gap: 10px;
+      align-items: center;
+      // height: 50px;
+
+      // span {
+      //   @include med {
+      //     display: none;
+      //   }
+
+        
+      
+    }
+
+    img {
+      width:200px;
+      margin-top: 18px;
+      padding: 0;
+
+      &:hover {
+        scale: 1;
+      }
+      @include med {
+        width:150px;
+
+       }
+
+    }
+  }
+  .right {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    z-index: 999;
+    font-size: 18px;
+    // font-family: Gruppo;
+
+    @include med {
+      background-color: transparent;
+    }
+
+    a {
+      padding: 12px 24px;
+      margin: 20px;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-family: Gruppo;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+
+      span {
+        @include mob {
+          display: none;
+        }
+      }
+
+      .profile {
+        padding: 12px 24px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid #8a8a8a;
+        color: white;
+        position: relative;
+
+        &:hover {
+          background-color: white;
+          color: #161616;
+        }
+
+        .notification {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          background-color: white;
+          color: black;
+          border-radius: 50%;
+          width: 26px;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .signUp {
+      padding: 12px 24px;
+        border-radius: 10px;
+        cursor: pointer;
+        border: 1px solid #8a8a8a;
+        color: white;
+        position: relative;
+
+       
+    }
+
+    .menuIcon {
+      display: none;
+      z-index: 999;
+      margin-top: 4px;
+
+      img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+
+      @include mob {
+        display: initial;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      font-family: Gruppo;
+      height: 80vh;
+      top: 0;
+      width: 50%;
+      color: white;
+      right: -70%;
+      transition: all 0.7s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      border-radius: 20px;
+      border-top-right-radius: 0px;
+      background-color: rgba(255, 255, 255, 0.13);
+      backdrop-filter: blur(10px);
+
+      &.active {
+        right: -1px;
+      }
+
+      @include mob {
+        a {
+          display: initial;
+        }
+      }
+    }
+  }
+}

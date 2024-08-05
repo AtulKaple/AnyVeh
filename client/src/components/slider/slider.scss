@@ -1,0 +1,112 @@
+@import "../../responsive.scss";
+
+.slider {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  gap: 20px;
+
+  .fullSlider {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+
+    .arrow {
+      flex: 1;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 50px;
+
+        @include med {
+          width: 30px;
+        }
+
+        @include mob {
+          width: 20px;
+        }
+
+        &.right {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .imgContainer {
+      flex: 10;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        object-fit: cover;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 15%;
+
+        @include med{
+            padding: 0px 5px;
+        }
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 36px;
+      font-weight: bold;
+      padding: 50px 80px;
+      cursor: pointer;
+      
+      @include med{
+        padding: 20px 20px;
+      }
+
+      img {
+        width: 50px;
+
+        @include med {
+          width: 30px;
+        }
+
+        @include mob {
+          width: 20px;
+        }
+      }
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .bigImage {
+    flex: 3;
+  }
+
+  .smallImages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+
+    img {
+      height: 100px;
+    }
+  }
+}

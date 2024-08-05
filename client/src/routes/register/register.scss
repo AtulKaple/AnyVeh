@@ -1,0 +1,83 @@
+@import "../../responsive.scss";
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Gruppo&family=Marcellus&display=swap');
+
+
+.register {
+  height: 100%;
+  display: flex;
+
+  .formContainer {
+    flex: 3;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    background-color: #161616;
+    justify-content: center;
+
+    @include mob{
+      padding: 20px;
+    }
+
+    h1{
+      font-family: Chakra Petch;
+    font-weight: 1000;
+    font-size: 50px;
+    -webkit-text-stroke: 1px #B78F75;
+    color: transparent;
+  
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+    
+      input {
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.13);
+        backdrop-filter: blur(10px);
+        color: #ffffff;
+        font-size: 16px;
+        font-family: Marcellus;
+
+        &:focus {
+          border: 1px solid white;
+        }
+      }
+
+      button {
+        padding: 20px;
+        border-radius: 5px;
+        background-color: teal;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: Gruppo;
+        font-size: 20px;
+
+        background-color: #161616;
+        border: 1px solid white;
+
+        &:disabled {
+          background-color: #bed9d8;
+          cursor: not-allowed;
+        }
+      }
+
+      span {
+        color: rgba(255, 0, 0, 0.591);
+      }
+
+      a {
+        font-size: 16px;
+        color: gray;
+        border-bottom: 1px solid gray;
+        width: max-content;
+        font-family: Gruppo;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@mixin mob{
+  @media (max-width:740px) {
+      @content;
+  }
+}
+
+
+@mixin med{
+  @media (max-width:1024px) {
+      @content;
+  }
+}
+
+
+@mixin lap{
+  @media (max-width:1366px) {
+      @content;
+  }
+}

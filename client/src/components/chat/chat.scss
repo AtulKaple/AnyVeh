@@ -1,0 +1,172 @@
+@import "../../responsive.scss";
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Marcellus&family=Russo+One&display=swap');
+
+
+.chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include med {
+    height: 50vh;
+    position: relative;
+  }
+
+  .messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    @include med {
+    overflow: hidden;
+    }
+
+    h1 {
+      font-family: Chakra Petch;
+      font-weight: 500;
+    }
+
+    .message {
+      padding: 20px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      cursor: pointer;
+      font-family: Gruppo;
+      font-size: 20px;
+      font-weight: 800;
+
+      p {
+        color: white;
+        font-family: Marcellus;
+        font-size: 16px;
+      font-weight: 300;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .chatBox {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.13);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid white;
+    
+    border-radius: 20px;
+    margin-bottom: 20px;
+    @include med {
+      flex: none;
+     
+      position: absolute;
+      top: 0;
+      width: 100%;
+      left: auto;
+
+      @include med {
+        background-color: rgb(43, 42, 42);
+      }
+    }
+
+    .top {
+      background-color: black;
+      padding: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: aliceblue;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 20px;
+        font-family: Gruppo;
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .close {
+        cursor: pointer;
+      }
+    }
+    .center {
+      overflow-y: scroll;
+      scrollbar-width: none;
+      height: 350px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .chatMessage {
+        width: 50%;
+        font-family: Marcellus;
+
+        &.own {
+          align-self: flex-end;
+          text-align: right;
+        }
+
+        span {
+          font-size: 12px;
+          padding: 2px;
+          color: white;
+          border-radius: 5px;
+          font-family: Gruppo;
+        }
+      }
+    }
+
+    .bottom {
+      border-top: 2px solid #000;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      textarea {
+        flex: 3;
+        height: 100%;
+        border: none;
+        padding: 20px;
+        resize: none;
+        scrollbar-width: none;
+        border-bottom-left-radius: 20px;
+        font-family: Marcellus;
+
+      }
+
+      button {
+        flex: 1;
+        background-color: #000;
+        color: aliceblue;
+        height: 100%;
+        border: none;
+        cursor: pointer;
+        border-bottom-right-radius: 20px;
+        font-family: Gruppo;
+        font-size: 18px;
+      }
+    }
+  }
+}

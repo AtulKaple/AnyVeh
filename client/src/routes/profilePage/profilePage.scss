@@ -1,0 +1,143 @@
+@import "../../responsive.scss";
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Gruppo&family=Marcellus&display=swap');
+
+
+.profilePage {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #161616;
+
+
+  @include med {
+    flex-direction: column;
+    overflow: scroll;
+    height: 90vh;
+    scrollbar-width: none;
+  }
+
+  .details {
+    flex: 3;
+    overflow-y: scroll;
+    padding: 5px;
+    margin-bottom: 50px;
+    scrollbar-width: none;
+    height: 80vh;
+
+
+    @include lap {
+        height: 80vh;
+      }
+
+
+    @include med {
+      flex: none;
+      height: max-content;
+    }
+
+    .wrapper {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      
+
+      b{
+        color: #B78F75;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      color: white;
+      
+
+
+        h1 {
+          font-family: Chakra Petch;
+      font-weight: 500;
+        }
+
+        button {
+          padding: 12px 24px;
+          background-color: #161616;
+          cursor: pointer;
+          color: white;
+          border: 1px solid white;
+          border-radius: 10px;
+          font-family: Gruppo;
+          font-size: 16px;
+
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      color: white;
+      font-family: Marcellus;
+
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+
+        button {
+          width: 100px;
+          background-color: rgba(255,255,255,0.13);
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          cursor: pointer;
+          font-size: 16px;
+          border-radius: 10px;
+          font-family: Gruppo;
+
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .chatContainer {
+    flex: 2;
+    background-color: #161616;
+    padding: 30px;
+    padding-left: 10px;
+    color: #B78F75;
+
+    height: 80vh;
+
+    @include lap{
+    height: 80vh;
+
+    }
+
+    @include med {
+      flex: none;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      height: 75%;
+    overflow: hidden;
+    }
+
+    .wrapper {
+   
+      height: 100%;
+
+  
+    }
+
+
+  }
+}

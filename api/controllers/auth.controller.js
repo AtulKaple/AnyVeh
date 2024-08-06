@@ -49,6 +49,9 @@ export const login = async (req, res) => {
     res.cookie("token",token,{
       httpOnly:true,
       secure:true,
+      sameSite: 'none',
+// domain: 'https://anyveh.onrender.com/',
+
       maxAge:age
     }).status(200).json(userInfo)
 

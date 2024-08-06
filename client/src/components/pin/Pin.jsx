@@ -16,8 +16,8 @@ function Pin({item}) {
         <img src={item.images[0]} alt="" />
         <div className="textContainer">
             <Link to={`/${item.id}`}>{item.title}</Link>
-            <span>₹{item.price}</span>
-            <b>${item.price}</b>
+            <span>{item.fuel}</span>
+            <b>₹{item.price}</b>
         </div>
        </div>
       </Popup>
